@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Problems - Assignment 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans p-4 md:p-8">
+
+    <h1 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">JavaScript Problem Solutions - Assignment 4</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Problem 1: Custom Map Function -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 1: Custom Map Function</h2>
+            <input type="text" id="mapArray" placeholder="Enter array, e.g., [1,2,3]"
+                class="border p-2 rounded w-full mb-2">
+            <input type="text" id="mapCallback" placeholder="Enter function, e.g., x => x * 2"
+                class="border p-2 rounded w-full mb-2">
+            <button onclick="handleCustomMap()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Execute</button>
+            <pre id="mapResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 2: Find Duplicate Elements -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 2: Find Duplicate Elements</h2>
+            <input type="text" id="duplicatesArray" placeholder="Enter array, e.g., [1,2,3,2,3]"
+                class="border p-2 rounded w-full mb-2">
+            <button onclick="handleFindDuplicates()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Find Duplicates</button>
+            <pre id="duplicatesResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 3: Convert Query String to Object -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 3: Convert Query String</h2>
+            <input type="text" id="queryString" placeholder="Enter query string, e.g., ?name=John&age=30"
+                class="border p-2 rounded w-full mb-2">
+            <button onclick="handleQueryStringToObject()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Convert</button>
+            <pre id="queryResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 4: Reverse Words in a String -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 4: Reverse Words in a String</h2>
+            <input type="text" id="reverseString" placeholder="Enter sentence, e.g., Hello World"
+                class="border p-2 rounded w-full mb-2">
+            <button onclick="handleReverseWords()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Reverse</button>
+            <pre id="reverseResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 5: Find Missing Number -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 5: Find Missing Number</h2>
+            <input type="text" id="missingNumberArray" placeholder="Enter array, e.g., [0, 1, 2, 4]"
+                class="border p-2 rounded w-full mb-2">
+            <button onclick="handleFindMissingNumber()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Find Missing</button>
+            <pre id="missingNumberResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 6: Validate Form -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 6: Validate Form</h2>
+            <input type="text" id="email" placeholder="Enter email" class="border p-2 rounded w-full mb-2">
+            <input type="password" id="password" placeholder="Enter password" class="border p-2 rounded w-full mb-2">
+            <button onclick="handleValidateForm()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Validate</button>
+            <pre id="validateResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 7: Greeting Message Generator -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 7: Greeting Message Generator</h2>
+            <input type="text" id="name" placeholder="Enter name" class="border p-2 rounded w-full mb-2">
+            <input type="text" id="timeOfDay" placeholder="Enter time of day" class="border p-2 rounded w-full mb-2">
+            <input type="text" id="language" placeholder="Enter language" class="border p-2 rounded w-full mb-2">
+            <button onclick="handleGenerateGreeting()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Generate Greeting</button>
+            <pre id="greetingResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 8: Format Full Name -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 8: Format Full Name</h2>
+            <input type="text" id="firstName" placeholder="Enter first name" class="border p-2 rounded w-full mb-2">
+            <input type="text" id="middleName" placeholder="Enter middle name" class="border p-2 rounded w-full mb-2">
+            <input type="text" id="lastName" placeholder="Enter last name" class="border p-2 rounded w-full mb-2">
+            <input type="text" id="title" placeholder="Enter title" class="border p-2 rounded w-full mb-2">
+            <button onclick="handleFormatFullName()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Format Name</button>
+            <pre id="fullNameResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 9: Merge Unique Sorted Arrays -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 9: Merge Unique Sorted Arrays</h2>
+            <input type="text" id="array1" placeholder="Enter first array, e.g., [1,3,5]"
+                class="border p-2 rounded w-full mb-2">
+            <input type="text" id="array2" placeholder="Enter second array, e.g., [2,3,6]"
+                class="border p-2 rounded w-full mb-2">
+            <button onclick="handleMergeUniqueSorted()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Merge and Sort</button>
+            <pre id="mergedArrayResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+
+        <!-- Problem 10: Deep Merge Objects -->
+        <div class="bg-white p-4 md:p-6 rounded-lg shadow-md">
+            <h2 class="text-lg md:text-xl font-semibold text-blue-600 mb-2">Problem 10: Deep Merge Objects</h2>
+            <textarea id="object1" placeholder='Enter first object, e.g., {"a":1}'
+                class="border p-2 rounded w-full mb-2"></textarea>
+            <textarea id="object2" placeholder='Enter second object, e.g., {"b":2}'
+                class="border p-2 rounded w-full mb-2"></textarea>
+            <button onclick="handleDeepMerge()"
+                class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700">Deep Merge</button>
+            <pre id="deepMergeResult" class="bg-gray-200 mt-4 p-4 rounded text-sm"></pre>
+        </div>
+    </div>
+
+    <footer class="text-center mt-10 text-gray-500">
+        <p>MD. NAZMUL HASAN MAJED | ASSIGNMENT-4 | GOINNOVIOUR TECHNOLOGY LIMITED</p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
